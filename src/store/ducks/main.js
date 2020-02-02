@@ -1,10 +1,10 @@
 export const types = {
-  ASYNC_GET: "ASYNC_GET",
-  GET: "GET"
+  ASYNC_GET: 'ASYNC_GET',
+  GET: 'GET',
 };
 
 const INITIAL_STATE = {
-  state: null
+  state: 'Texto qualquer',
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -12,13 +12,13 @@ export default (state = INITIAL_STATE, action) => {
     case types.GET:
       return {
         ...state,
-        state: action.payload
+        state: action.payload,
       };
     default:
-      return { ...state };
+      return {...state};
   }
 };
 
 export const get = () => ({
-  type: types.ASYNC_GET
+  type: types.ASYNC_GET,
 });

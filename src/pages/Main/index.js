@@ -1,24 +1,21 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, Button, ActivityIndicator} from 'react-native';
-
+import {View, Text, StyleSheet, Button, ActivityIndicator} from 'react-native';
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
 
+import StatusBar from '../../shared/statusBar';
 import {get} from '../../store/ducks/main';
 
-import {
-  widthPercentageToDP as wp,
-  heightPercentageToDP as hp,
-} from 'react-native-responsive-screen';
+import {bindActionCreators} from 'redux';
 
 class Main extends Component {
-  static navigationOptions = navigation => ({
-    header: null,
-  });
-
   render() {
     const {} = this.props;
-    return <View></View>;
+    return (
+      <View>
+        <StatusBar />
+        <Text>{this.props.state}</Text>
+      </View>
+    );
   }
 }
 
