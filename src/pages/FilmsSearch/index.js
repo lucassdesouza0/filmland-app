@@ -1,13 +1,12 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, Text} from 'react-native';
 
 import Input from '../../components/Input';
-
-// import { Container } from './styles';
 
 export default function FilmsSearch() {
   return (
     <View>
+      <Text>Busque seu filme pelo nome</Text>
       <Input />
     </View>
   );

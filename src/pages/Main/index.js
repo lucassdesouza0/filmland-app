@@ -1,51 +1,48 @@
-import React, {Component} from 'react';
-import {View, Text, StyleSheet, Button, ActivityIndicator} from 'react-native';
-import {BottomNavigation} from 'react-native-paper';
+import React, {Component, useState} from 'react';
+import {StyleSheet, SafeAreaView} from 'react-native';
 import {connect} from 'react-redux';
-
-import {get} from '../../store/ducks/main';
 
 import StatusBar from '../../shared/statusBar';
 import FilmsSearch from '../FilmsSearch';
 import TheatersSearch from '../TheatersSearch';
 
-import {bindActionCreators} from 'redux';
+import {BottomNavigation} from 'react-native-paper';
 
-class Main extends Component {
-  state = {
+export default function Main() {
+  const [routes, setRoutes] = useState({
     index: 0,
     routes: [
-      {key: 'music', title: 'Music', icon: 'queue-music'},
-      {key: 'albums', title: 'Albums', icon: 'album'},
-      {key: 'recents', title: 'Recents', icon: 'history'},
+      {key: 'filmes', title: 'Filmes', icon: 'video'},
+      {key: 'cinemas', title: 'Cinema Mais Próximo', icon: 'map'},
     ],
-  };
-  _handleIndexChange = index => this.setState({index});
-  _renderTab = BottomNavigation.SceneMap({
-    films: FilmsSearch,
-    theaters: TheatersSearch,
   });
-  render() {
-    const {} = this.props;
-    return (
-      <View>
-        <StatusBar />
-        <BottomNavigation
-          navigationState={this.state}
-          onIndexChange={this._handleIndexChange}
-          renderScene={this._renderTab}
-        />
-      </View>
-    );
-  }
+
+  const renderScene = BottomNavigation.SceneMap({
+    filmes: FilmsSearch,
+    cinemas: TheatersSearch,
+  });
+
+  const changeRoute = index => {
+    setRoutes({
+      ...routes,
+      index: index,
+    });
+  };
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <StatusBar></StatusBar>
+      <BottomNavigation
+        navigationState={routes}
+        onIndexChange={changeRoute}
+        renderScene={renderScene}
+      />
+    </SafeAreaView>
+  );
 }
 
-const styles = StyleSheet.create({});
-
-const mapStateToProps = state => ({
-  state: state.main.state,
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
 });
-
-const mapDispatchToProps = dispatch => bindActionCreators({get}, dispatch);
-
-export default Main = connect(mapStateToProps, mapDispatchToProps)(Main);

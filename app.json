@@ -12,5 +12,6 @@
       "android",
       "web"
     ]
-  }
+  },
+  "icon": "./src/assets/img/icon.png",
 }
