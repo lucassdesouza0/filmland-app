@@ -23,7 +23,12 @@ module.exports = {
       {
         // example configuration
         newlinesBetween: 'always',
-        groups: ['/^react/', '/module/', ['parent', 'sibling', 'index']],
+        groups: [
+          '/^react/',
+          '/^expo/',
+          '/module/',
+          ['parent', 'sibling', 'index'],
+        ],
         alphabetize: {order: 'asc', ignoreCase: true},
       },
     ],

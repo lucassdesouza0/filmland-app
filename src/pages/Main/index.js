@@ -1,10 +1,10 @@
 import React, {Component, useState} from 'react';
-import {StyleSheet, SafeAreaView} from 'react-native';
+import {StyleSheet, SafeAreaView, StatusBar} from 'react-native';
 import {connect} from 'react-redux';
 
-import StatusBar from '../../shared/statusBar';
 import FilmsSearch from '../FilmsSearch';
 import TheatersSearch from '../TheatersSearch';
+import Header from '../../components/Header';
 
 import {BottomNavigation} from 'react-native-paper';
 
@@ -31,7 +31,7 @@ export default function Main() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar></StatusBar>
+      <Header />
       <BottomNavigation
         navigationState={routes}
         onIndexChange={changeRoute}
@@ -44,5 +44,6 @@ export default function Main() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: StatusBar.currentHeight,
   },
 });

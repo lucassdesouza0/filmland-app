@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
-import MapView from 'react-native-maps';
+
+import MapScreen from './map';
 
 const {height, width} = Dimensions.get('screen');
 
 export default function TheatersSearch() {
   return (
     <View style={styles.container}>
-      <MapView style={styles.mapStyle} />
+      <MapScreen />
     </View>
   );
 }

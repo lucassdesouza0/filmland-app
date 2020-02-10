@@ -7,11 +7,15 @@
     "privacy": "unlisted",
     "sdkVersion": "36.0.0",
     "version": "1.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ]
+    "platforms": ["ios", "android", "web"]
   },
   "icon": "./src/assets/img/icon.png",
+  "android": {
+    "package": "br.com.filmland",
+    "config": {
+      "googleMaps": {
+        "apiKey": "AIzaSyA4EqCSNTYOo287BeAkT4hIKfHlWFEZeXw"
+      }
+    }
+  }
 }
