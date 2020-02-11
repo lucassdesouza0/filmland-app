@@ -1,11 +1,17 @@
 import React, {useState, useEffect} from 'react';
-import {View, StyleSheet, Dimensions} from 'react-native';
+import {View, StyleSheet} from 'react-native';
+
+import {useDispatch} from 'react-redux';
 
 import MapScreen from './map';
 
-const {height, width} = Dimensions.get('screen');
-
 export default function TheatersSearch() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch({type: 'GET_INITIAL_LOCATION'});
+  }, []);
+
   return (
     <View style={styles.container}>
       <MapScreen />
@@ -19,9 +25,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  mapStyle: {
-    width: width,
-    height: height,
   },
 });
