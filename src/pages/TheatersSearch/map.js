@@ -4,7 +4,7 @@ import {StyleSheet, Dimensions} from 'react-native';
 import {useSelector} from 'react-redux';
 
 import MapView from 'react-native-maps';
-import CinemasMarkers from './marker';
+import Markers from './marker';
 
 const {height, width} = Dimensions.get('screen');
 
@@ -16,7 +16,7 @@ export default function MapScreen() {
       initialRegion={initialLocation}
       loadingEnabled={true}
       style={styles.mapStyle}>
-      <CinemasMarkers />
+      <Markers />
     </MapView>
   );
 }

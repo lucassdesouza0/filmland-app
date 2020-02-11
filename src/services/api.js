@@ -15,6 +15,6 @@ export const mapApi = location =>
 
 export const mapDetailApi = id =>
   axios.create({
-    baseURL: `https://maps.googleapis.com/maps/api/place/details/json?query=key=AIzaSyA4EqCSNTYOo287BeAkT4hIKfHlWFEZeXw&id=${id}`,
+    baseURL: `https://maps.googleapis.com/maps/api/place/details/json?key=AIzaSyA4EqCSNTYOo287BeAkT4hIKfHlWFEZeXw&place_id=${id}`,
     timeout: 120000,
   });

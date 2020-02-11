@@ -4,6 +4,7 @@ import {View, StyleSheet} from 'react-native';
 import {useDispatch} from 'react-redux';
 
 import MapScreen from './map';
+import Detail from './detail';
 
 export default function TheatersSearch() {
   const dispatch = useDispatch();
@@ -15,6 +16,7 @@ export default function TheatersSearch() {
   return (
     <View style={styles.container}>
       <MapScreen />
+      <Detail />
     </View>
   );
 }

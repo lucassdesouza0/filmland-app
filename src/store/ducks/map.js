@@ -5,12 +5,16 @@ export const types = {
   GET_CINEMAS_LOCATION: 'GET_CINEMAS_LOCATION',
   SET_CINEMAS_LOCATION: 'SET_CINEMAS_LOCATION',
 
-  SHOW_CINEMAS_DETAIL: 'SHOW_CINEMAS_DETAIL',
+  GET_CINEMA_DETAIL: 'GET_CINEMA_DETAIL',
+  SET_CINEMA_DETAIL: 'SET_CINEMA_DETAIL',
+  SHOW_CINEMA_DETAIL: 'SHOW_CINEMA_DETAIL',
 };
 
 const INITIAL_STATE = {
   location: [],
   cinemas: [],
+  showCinemaDetail: false,
+  cinemaDetail: [],
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -24,6 +28,16 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         cinemas: action.payload,
+      };
+    case types.SET_CINEMAS_DETAIL:
+      return {
+        ...state,
+        cinemaDetail: action.payload,
+      };
+    case types.SHOW_CINEMA_DETAIL:
+      return {
+        ...state,
+        showCinemaDetail: !state.showCinemaDetail,
       };
     default:
       return {...state};

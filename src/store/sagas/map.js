@@ -1,4 +1,4 @@
-import {all, takeLatest, call, put, select} from 'redux-saga/effects';
+import {all, takeLatest, call, put, select, take} from 'redux-saga/effects';
 
 import {types} from '../ducks/map';
 
@@ -40,9 +40,23 @@ function* getCinemasLocation() {
   } catch (error) {}
 }
 
+function* getCinemasDetail(action) {
+  try {
+    const id = action.payload;
+
+    const {data} = yield call(service.getCinemasDetail, id);
+
+    yield all([
+      put({type: types.SET_CINEMA_DETAIL, payload: data.result}),
+      put({type: types.SHOW_CINEMA_DETAIL}),
+    ]);
+  } catch (error) {}
+}
+
 export default function* mapSaga() {
   yield all([
     takeLatest(types.GET_INITIAL_LOCATION, getLocation),
     takeLatest(types.GET_CINEMAS_LOCATION, getCinemasLocation),
+    takeLatest(types.GET_CINEMA_DETAIL, getCinemasDetail),
   ]);
 }

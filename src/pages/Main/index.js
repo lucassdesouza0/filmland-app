@@ -36,6 +36,7 @@ export default function Main() {
         navigationState={routes}
         onIndexChange={changeRoute}
         renderScene={renderScene}
+        style={styles.tab}
       />
     </SafeAreaView>
   );
@@ -45,5 +46,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: StatusBar.currentHeight,
+  },
+  tab: {
+    borderRadius: 20,
   },
 });
