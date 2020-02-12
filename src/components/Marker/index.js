@@ -20,16 +20,12 @@ export default function Markers() {
       {cinemas.map(item => (
         <Marker
           key={item.id}
+          onPress={() => showDetail(item.place_id)}
           coordinate={{
             latitude: item.geometry.location.lat,
             longitude: item.geometry.location.lng,
           }}>
-          <IconButton
-            icon="filmstrip"
-            color="#000"
-            size={40}
-            onPress={showDetail(item.place_id)}
-          />
+          <IconButton icon="movie" color="#000" size={25} />
         </Marker>
       ))}
     </View>

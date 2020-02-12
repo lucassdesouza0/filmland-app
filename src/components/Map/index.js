@@ -4,7 +4,7 @@ import {StyleSheet, Dimensions} from 'react-native';
 import {useSelector} from 'react-redux';
 
 import MapView from 'react-native-maps';
-import Markers from './marker';
+import Markers from '../Marker';
 
 const {height, width} = Dimensions.get('screen');
 

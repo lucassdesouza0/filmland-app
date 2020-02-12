@@ -4,6 +4,7 @@ import {View, StyleSheet, Text, Button} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 
 import Modal from 'react-native-modal';
+import {IconButton} from 'react-native-paper';
 
 export default function Detail() {
   const dispatch = useDispatch();
@@ -23,8 +24,17 @@ export default function Detail() {
       <View style={styles.container}>
         <View>
           <Text style={styles.title}>{data.name}</Text>
-          <Text style={styles.title}>{data.vicinity}</Text>
-          <Button title="Fechar" onPress={closeModal} />
+          <Text style={styles.addressTitle}>
+            Endereço:
+            <Text style={styles.address}> {data.vicinity}</Text>
+          </Text>
+          <IconButton
+            style={styles.close}
+            icon="close"
+            color="#fff"
+            size={25}
+            onPress={closeModal}
+          />
         </View>
       </View>
     </Modal>
@@ -42,7 +52,20 @@ const styles = StyleSheet.create({
   },
   title: {
     flexGrow: 4,
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
+    textAlign: 'center',
+  },
+  addressTitle: {
+    fontWeight: 'bold',
+  },
+  address: {
+    fontSize: 15,
+    fontWeight: 'normal',
+  },
+  close: {
+    marginTop: 20,
+    backgroundColor: '#142850',
+    alignSelf: 'center',
   },
 });

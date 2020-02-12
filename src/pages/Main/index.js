@@ -36,7 +36,8 @@ export default function Main() {
         navigationState={routes}
         onIndexChange={changeRoute}
         renderScene={renderScene}
-        style={styles.tab}
+        activeColor="#0c7b93"
+        barStyle={styles.tab}
       />
     </SafeAreaView>
   );
@@ -48,6 +49,6 @@ const styles = StyleSheet.create({
     paddingTop: StatusBar.currentHeight,
   },
   tab: {
-    borderRadius: 20,
+    backgroundColor: '#142850',
   },
 });

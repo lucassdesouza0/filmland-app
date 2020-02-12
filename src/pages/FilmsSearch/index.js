@@ -1,22 +1,29 @@
 import React, {useEffect} from 'react';
 import {View, TextInput, Text, Button, StyleSheet} from 'react-native';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 
 import FilmsList from '../../components/FilmsList';
+import Loading from '../../shared/loading';
+import {IconButton} from 'react-native-paper';
 
 export default function FilmsSearch() {
+  const show = useSelector(state => state.films.loading);
   const dispatch = useDispatch();
+  let filmsSaved = useSelector(state => state.films.filmsSaved);
+
+  useEffect(() => {
+    dispatch({type: 'ASYNC_GET_LOCAL_FILMS'});
+  }, []);
 
   function input(input) {
-    dispatch({type: 'ASYNC_SEARCH_INPUT', search: input});
+    dispatch({type: 'ASYNC_SEARCH_INPUT', search: {input}});
   }
 
   function search() {
-    dispatch({type: 'ASYNC_GET_FILMS_BY_QUERY'});
+    dispatch({type: 'ASYNC_GET_FILMS_BY_QUERY', search: {page: 1}});
   }
-
   return (
-    <View>
+    <View style={styles.view}>
       <View style={styles.inputContainer}>
         <TextInput
           onChangeText={text => input(text)}
@@ -24,21 +31,31 @@ export default function FilmsSearch() {
           mode="Outlined"
           dense={true}
           style={styles.input}></TextInput>
-        <Button title="Buscar" onPress={search} style={styles.button} />
+        <IconButton icon="magnify" onPress={search} style={styles.button} />
       </View>
       <FilmsList />
+      {show ? <Loading /> : <></>}
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  inputContainer: {
-    flexDirection: 'row',
+  view: {
+    flexDirection: 'column',
     paddingHorizontal: 10,
-    paddingVertical: 10,
+  },
+  inputContainer: {
+    flexGrow: 1,
+    flexDirection: 'row',
+    backgroundColor: '#fff',
+    marginTop: 20,
+    borderRadius: 20,
   },
   input: {
     flex: 1,
+    flexGrow: 4,
+    paddingHorizontal: 10,
+    paddingVertical: 10,
   },
   button: {
     flex: 1,

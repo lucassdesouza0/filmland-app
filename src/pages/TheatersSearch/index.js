@@ -3,8 +3,8 @@ import {View, StyleSheet} from 'react-native';
 
 import {useDispatch} from 'react-redux';
 
-import MapScreen from './map';
-import Detail from './detail';
+import MapScreen from '../../components/Map';
+import Detail from '../../components/TheaterDetail';
 
 export default function TheatersSearch() {
   const dispatch = useDispatch();

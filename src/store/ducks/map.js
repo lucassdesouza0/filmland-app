@@ -29,7 +29,7 @@ export default (state = INITIAL_STATE, action) => {
         ...state,
         cinemas: action.payload,
       };
-    case types.SET_CINEMAS_DETAIL:
+    case types.SET_CINEMA_DETAIL:
       return {
         ...state,
         cinemaDetail: action.payload,
