@@ -34,7 +34,11 @@ export default function FilmsList() {
 
   return (
     <View>
-      {list.length ? <></> : <Text style={styles.saved}>Filmes salvos</Text>}
+      {list.length && !filmsSaved.length ? (
+        <></>
+      ) : (
+        <Text style={styles.saved}>Filmes salvos</Text>
+      )}
       <FlatList
         style={styles.list}
         data={list.length ? list : filmsSaved}

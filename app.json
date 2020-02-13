@@ -12,6 +12,15 @@
   "version": "1.0.0",
   "orientation": "portrait",
   "icon": "./src/assets/img/icon.png",
+  "ios": {
+    "bundleIdentifier": "br.com.filmland",
+    "versionCode": 1,
+    "config": {
+      "googleMaps": {
+        "apiKey": "AIzaSyA4EqCSNTYOo287BeAkT4hIKfHlWFEZeXw"
+      }
+    }
+  },
   "android": {
     "package": "br.com.filmland",
     "versionCode": 1,
