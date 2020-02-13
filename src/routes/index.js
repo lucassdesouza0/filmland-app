@@ -10,6 +10,7 @@ const Routes = createAppContainer(
     },
     {
       initialRouteName: 'Main',
+      headerMode: null,
     },
   ),
 );
