@@ -3,7 +3,7 @@ import {View, TextInput, Text, Button, StyleSheet} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 import FilmsList from '../../components/FilmsList';
-import Loading from '../../shared/loading';
+import {ListLoading} from '../../shared/loading';
 import {IconButton} from 'react-native-paper';
 
 export default function FilmsSearch() {
@@ -33,8 +33,13 @@ export default function FilmsSearch() {
           style={styles.input}></TextInput>
         <IconButton icon="magnify" onPress={search} style={styles.button} />
       </View>
-      <FilmsList />
-      {show ? <Loading /> : <></>}
+      {show ? (
+        <View style={styles.loading}>
+          <ListLoading />
+        </View>
+      ) : (
+        <FilmsList />
+      )}
     </View>
   );
 }
@@ -49,6 +54,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#fff',
     marginTop: 20,
+    marginBottom: 10,
     borderRadius: 20,
   },
   input: {
@@ -59,5 +65,8 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
+  },
+  loading: {
+    paddingHorizontal: 10,
   },
 });

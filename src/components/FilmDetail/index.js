@@ -34,7 +34,7 @@ export default function FilmDetail() {
             style={styles.close}
             icon="close"
             color="#fff"
-            size={40}
+            size={25}
             onPress={closeModal}
           />
         </View>

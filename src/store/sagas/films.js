@@ -5,7 +5,7 @@ import * as service from '../../services/films';
 
 import {NavigationActions} from 'react-navigation';
 
-import {SnackbarShow, snackbarShowError} from '../ducks/snackbar';
+import {snackbarShow, snackbarShowError} from '../ducks/snackbar';
 
 function* get(action) {
   try {
@@ -26,14 +26,19 @@ function* getLocalFilms() {
 
 function* saveFilm(action) {
   const {title, poster_path, release_date, overview} = action.data;
-
   const film = {title, poster_path, release_date, overview};
+
+  let localFilms = yield call(service.getFilmsSaved);
+
+  if (!localFilms) localFilms = [];
+  localFilms.push(film);
+
+  yield call(service.saveFilme, localFilms);
 
   let filmsSaved = yield call(service.getFilmsSaved);
 
-  yield call(service.saveFilme, {...filmsSaved, ...film});
-
-  const teste = yield call(service.getFilmsSaved);
+  yield put({type: types.GET_FILMS_SAVED, payload: filmsSaved});
+  yield put(snackbarShow('Filme salvo!'));
 }
 
 export default function* filmsSaga() {

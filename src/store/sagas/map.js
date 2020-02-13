@@ -1,4 +1,4 @@
-import {all, takeLatest, call, put, select, take} from 'redux-saga/effects';
+import {all, takeLatest, call, put, select, delay} from 'redux-saga/effects';
 
 import {types} from '../ducks/map';
 
@@ -21,23 +21,32 @@ function* getLocation() {
       };
 
       yield put({type: types.SET_INITIAL_LOCATION, payload: initialLocation});
-      yield put({type: types.GET_CINEMAS_LOCATION});
+      yield put({
+        type: types.GET_CINEMAS_LOCATION,
+        payload: true,
+      });
     }
   } catch (error) {
-    yield put(snackbarShowError(`${error}`));
+    yield put(snackbarShowError('Erro ao encontrar sua localização atual'));
   }
 }
 
-function* getCinemasLocation() {
+function* getCinemasLocation(action) {
   try {
-    const {latitude, longitude} = yield select(state => state.map.location);
+    const {latitude, longitude} = action.payload
+      ? yield select(state => state.map.location)
+      : action.region;
+
+    yield delay(5000);
 
     const location = `${latitude},${longitude}`;
 
     const {data} = yield call(service.getCinemasLocation, location);
 
     yield put({type: types.SET_CINEMAS_LOCATION, payload: data.results});
-  } catch (error) {}
+  } catch (error) {
+    yield put(snackbarShowError('Erro ao buscar o cinemas mais próximos'));
+  }
 }
 
 function* getCinemasDetail(action) {
@@ -50,7 +59,11 @@ function* getCinemasDetail(action) {
       put({type: types.SET_CINEMA_DETAIL, payload: data.result}),
       put({type: types.SHOW_CINEMA_DETAIL}),
     ]);
-  } catch (error) {}
+  } catch (error) {
+    yield put(
+      snackbarShowError('Erro ao buscar mais informações sobre o cinema'),
+    );
+  }
 }
 
 export default function* mapSaga() {

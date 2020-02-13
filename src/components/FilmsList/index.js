@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, FlatList} from 'react-native';
+import {Text, View, FlatList, StyleSheet} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 
 import FilmItem from '../FilmItem';
@@ -23,25 +23,21 @@ export default function FilmsList() {
   }
 
   function loadRepositories() {
-    setLoading(true);
-    dispatch({type: 'ASYNC_GET_FILMS_BY_QUERY', search: {page}});
-
-    setPage(page + 1);
-    setLoading(false);
-  }
-
-  useEffect(() => {
     if (list.length) {
-      list = filmsSaved;
+      setLoading(true);
+      dispatch({type: 'ASYNC_GET_FILMS_BY_QUERY', search: {page}});
+
+      setPage(page + 1);
+      setLoading(false);
     }
-  }, [list]);
+  }
 
   return (
     <View>
+      {list.length ? <></> : <Text style={styles.saved}>Filmes salvos</Text>}
       <FlatList
-        style={{marginTop: 30}}
-        // contentContainerStyle={styles.list}
-        data={list}
+        style={styles.list}
+        data={list.length ? list : filmsSaved}
         renderItem={_renderItem}
         keyExtractor={item => item.id}
         ListFooterComponent={renderFooter}
@@ -52,3 +48,13 @@ export default function FilmsList() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  list: {paddingVertical: 10, marginBottom: 80},
+  saved: {
+    marginTop: 10,
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+});

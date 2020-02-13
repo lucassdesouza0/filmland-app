@@ -25,7 +25,7 @@ export default function Markers() {
             latitude: item.geometry.location.lat,
             longitude: item.geometry.location.lng,
           }}>
-          <IconButton icon="movie" color="#000" size={25} />
+          <IconButton icon="movie" color="#000" size={30} />
         </Marker>
       ))}
     </View>

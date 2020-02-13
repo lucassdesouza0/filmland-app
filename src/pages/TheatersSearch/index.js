@@ -3,6 +3,7 @@ import {View, StyleSheet} from 'react-native';
 
 import {useDispatch} from 'react-redux';
 
+import {IconButton} from 'react-native-paper';
 import MapScreen from '../../components/Map';
 import Detail from '../../components/TheaterDetail';
 

@@ -2,9 +2,11 @@ import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import {IconButton} from 'react-native-paper';
 
-import {useDispatch} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 
 export default function FilmItem({item}) {
+  let list = useSelector(state => state.films.films);
+
   const dispatch = useDispatch();
 
   function openModal() {
@@ -27,13 +29,17 @@ export default function FilmItem({item}) {
       </View>
       <Text style={styles.title}>{item.title}</Text>
       <View style={styles.icons}>
-        <IconButton
-          style={styles.icon}
-          icon="content-save"
-          color={'#000'}
-          size={30}
-          onPress={saveItem}
-        />
+        {list.length ? (
+          <IconButton
+            style={styles.icon}
+            icon="content-save"
+            color={'#000'}
+            size={30}
+            onPress={saveItem}
+          />
+        ) : (
+          <></>
+        )}
         <IconButton
           style={styles.icon}
           icon="information-outline"

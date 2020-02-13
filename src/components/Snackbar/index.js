@@ -51,7 +51,9 @@ const styles = StyleSheet.create({
   warn: {
     fontSize: 14,
     color: '#fff',
+    backgroundColor: '#142850',
     fontWeight: 'bold',
+    marginBottom: 60,
   },
   dangerText: {
     fontSize: 14,
@@ -59,5 +61,6 @@ const styles = StyleSheet.create({
   },
   danger: {
     backgroundColor: 'red',
+    marginBottom: 60,
   },
 });

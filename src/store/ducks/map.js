@@ -12,6 +12,7 @@ export const types = {
 
 const INITIAL_STATE = {
   location: [],
+  loadingCinemas: false,
   cinemas: [],
   showCinemaDetail: false,
   cinemaDetail: [],
@@ -24,10 +25,16 @@ export default (state = INITIAL_STATE, action) => {
         ...state,
         location: action.payload,
       };
+    case types.GET_CINEMAS_LOCATION:
+      return {
+        ...state,
+        loadingCinemas: true,
+      };
     case types.SET_CINEMAS_LOCATION:
       return {
         ...state,
         cinemas: action.payload,
+        loadingCinemas: false,
       };
     case types.SET_CINEMA_DETAIL:
       return {
