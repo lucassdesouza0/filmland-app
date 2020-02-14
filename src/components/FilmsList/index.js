@@ -34,10 +34,12 @@ export default function FilmsList() {
 
   return (
     <View>
-      {list.length && !filmsSaved.length ? (
+      {list.length ? (
         <></>
-      ) : (
+      ) : filmsSaved && filmsSaved.length ? (
         <Text style={styles.saved}>Filmes salvos</Text>
+      ) : (
+        <Text style={styles.saved}>Nenhum filme salvo</Text>
       )}
       <FlatList
         style={styles.list}
@@ -48,13 +50,12 @@ export default function FilmsList() {
         onEndReached={loadRepositories}
         onEndReachedThreshold={0.4}
       />
-      <FilmDetail />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  list: {paddingVertical: 10, marginBottom: 80},
+  list: {paddingVertical: 10},
   saved: {
     marginTop: 10,
     fontSize: 20,

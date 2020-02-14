@@ -33,6 +33,7 @@ export default function MapScreen() {
       {loadingCinemas ? <Loading /> : <></>}
       <MapView
         mapType={Platform.OS == 'android' ? 'none' : 'standard'}
+        showsUserLocation={true}
         initialRegion={initialLocation}
         loadingEnabled={true}
         style={styles.mapStyle}
