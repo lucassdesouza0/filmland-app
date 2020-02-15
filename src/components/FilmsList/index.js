@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {Text, View, FlatList, StyleSheet} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 
@@ -50,6 +50,7 @@ export default function FilmsList() {
         onEndReached={loadRepositories}
         onEndReachedThreshold={0.4}
       />
+      <FilmDetail />
     </View>
   );
 }

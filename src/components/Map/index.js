@@ -8,7 +8,7 @@ import Markers from '../Marker';
 import {FAB} from 'react-native-paper';
 import {Loading} from '../../shared/loading';
 
-import {mapStyle} from './style';
+import {mapStyle} from './mapStyle';
 const {height, width} = Dimensions.get('screen');
 
 export default function MapScreen() {

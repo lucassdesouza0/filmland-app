@@ -24,7 +24,7 @@ module.exports = {
         // example configuration
         newlinesBetween: 'always',
         groups: [
-          '/^react/',
+          '/^react-/',
           '/^expo/',
           '/module/',
           ['parent', 'sibling', 'index'],

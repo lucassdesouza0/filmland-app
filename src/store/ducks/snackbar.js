@@ -40,7 +40,3 @@ export const snackbarShowError = (text = '') => {
     },
   };
 };
-
-export const snackbarDismiss = () => {
-  return {type: types.SNACKBAR_DISMISS};
-};
