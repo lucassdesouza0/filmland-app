@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, StyleSheet, Dimensions} from 'react-native';
+import {View, StyleSheet, Dimensions, Platform} from 'react-native';
 
 import {useSelector, useDispatch} from 'react-redux';
 
@@ -8,6 +8,7 @@ import Markers from '../Marker';
 import {FAB} from 'react-native-paper';
 import {Loading} from '../../shared/loading';
 
+import {mapStyle} from './mapStyle';
 const {height, width} = Dimensions.get('screen');
 
 export default function MapScreen() {
@@ -31,10 +32,13 @@ export default function MapScreen() {
     <View>
       {loadingCinemas ? <Loading /> : <></>}
       <MapView
+        mapType={Platform.OS == 'android' ? 'none' : 'standard'}
+        showsUserLocation={true}
         initialRegion={initialLocation}
         loadingEnabled={true}
         style={styles.mapStyle}
-        onRegionChange={regionChange}>
+        onRegionChange={regionChange}
+        customMapStyle={mapStyle}>
         <Markers />
       </MapView>
       <FAB
@@ -56,6 +60,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     margin: 16,
     right: 0,
-    bottom: 0,
+    bottom: 10,
   },
 });

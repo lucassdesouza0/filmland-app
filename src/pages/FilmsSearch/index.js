@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {View, TextInput, Text, Button, StyleSheet} from 'react-native';
+import {View, TextInput, StyleSheet} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 
 import FilmsList from '../../components/FilmsList';
@@ -9,7 +9,6 @@ import {IconButton} from 'react-native-paper';
 export default function FilmsSearch() {
   const show = useSelector(state => state.films.loading);
   const dispatch = useDispatch();
-  let filmsSaved = useSelector(state => state.films.filmsSaved);
 
   useEffect(() => {
     dispatch({type: 'ASYNC_GET_LOCAL_FILMS'});
@@ -22,12 +21,15 @@ export default function FilmsSearch() {
   function search() {
     dispatch({type: 'ASYNC_GET_FILMS_BY_QUERY', search: {page: 1}});
   }
+
   return (
     <View style={styles.view}>
       <View style={styles.inputContainer}>
         <TextInput
           onChangeText={text => input(text)}
           placeholder="Busque seu filme"
+          returnKeyType="search"
+          onSubmitEditing={search}
           mode="Outlined"
           dense={true}
           style={styles.input}></TextInput>

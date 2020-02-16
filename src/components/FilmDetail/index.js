@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, StyleSheet, Button} from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 
 import Modal from 'react-native-modal';

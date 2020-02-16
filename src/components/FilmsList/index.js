@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {Text, View, FlatList, StyleSheet} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 
@@ -34,7 +34,13 @@ export default function FilmsList() {
 
   return (
     <View>
-      {list.length ? <></> : <Text style={styles.saved}>Filmes salvos</Text>}
+      {list.length ? (
+        <></>
+      ) : filmsSaved && filmsSaved.length ? (
+        <Text style={styles.saved}>Filmes salvos</Text>
+      ) : (
+        <Text style={styles.saved}>Nenhum filme salvo</Text>
+      )}
       <FlatList
         style={styles.list}
         data={list.length ? list : filmsSaved}
@@ -50,7 +56,7 @@ export default function FilmsList() {
 }
 
 const styles = StyleSheet.create({
-  list: {paddingVertical: 10, marginBottom: 80},
+  list: {paddingVertical: 10},
   saved: {
     marginTop: 10,
     fontSize: 20,

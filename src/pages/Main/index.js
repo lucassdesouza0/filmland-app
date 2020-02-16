@@ -1,6 +1,5 @@
-import React, {Component, useState} from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, SafeAreaView, StatusBar} from 'react-native';
-import {connect} from 'react-redux';
 
 import FilmsSearch from '../FilmsSearch';
 import TheatersSearch from '../TheatersSearch';

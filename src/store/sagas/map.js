@@ -37,7 +37,7 @@ function* getCinemasLocation(action) {
       ? yield select(state => state.map.location)
       : action.region;
 
-    yield delay(5000);
+    yield delay(2000);
 
     const location = `${latitude},${longitude}`;
 

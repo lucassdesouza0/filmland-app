@@ -1,11 +1,8 @@
-import React, {Component} from 'react';
-
-import {StyleSheet, View} from 'react-native';
+import React from 'react';
+import {StyleSheet} from 'react-native';
 import {useSelector, useDispatch} from 'react-redux';
 
 import {Text, Snackbar} from 'react-native-paper';
-
-import {snackbarDismiss as dismiss} from '../../store/ducks/snackbar';
 
 export default function SnackBarRedux() {
   const dispatch = useDispatch();

@@ -1,0 +1,1735 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilmsSearch Page it should render flatlist with 2 films from api 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "column",
+      "paddingHorizontal": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 20,
+        "flexDirection": "row",
+        "flexGrow": 1,
+        "marginBottom": 10,
+        "marginTop": 20,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      dense={true}
+      mode="Outlined"
+      onChangeText={[Function]}
+      placeholder="Busque seu filme"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "flex": 1,
+          "flexGrow": 4,
+          "paddingHorizontal": 10,
+          "paddingVertical": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+      value=""
+    />
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      focusable={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "margin": 6,
+              "overflow": "hidden",
+            },
+            Object {
+              "borderRadius": 18,
+              "height": 36,
+              "width": 36,
+            },
+            undefined,
+            Object {
+              "flex": 1,
+            },
+          ],
+        ]
+      }
+    >
+      <View
+        style={null}
+      >
+        <Text
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+          pointerEvents="none"
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "color": "#000000",
+                "fontSize": 24,
+              },
+            ]
+          }
+        >
+          □
+        </Text>
+      </View>
+    </View>
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      focusable={false}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "margin": 6,
+              "overflow": "hidden",
+            },
+            Object {
+              "borderRadius": 18,
+              "height": 36,
+              "width": 36,
+            },
+            undefined,
+            Object {
+              "flex": 1,
+            },
+          ],
+        ]
+      }
+    >
+      <View
+        style={null}
+      >
+        <Text
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+          pointerEvents="none"
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "color": "#000000",
+                "fontSize": 24,
+              },
+            ]
+          }
+        >
+          □
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <RCTScrollView
+      ListFooterComponent={[Function]}
+      data={
+        Array [
+          Object {
+            "adult": false,
+            "backdrop_path": "/9myrRcegWGGp24mpVfkD4zhUfhi.jpg",
+            "genre_ids": Array [
+              28,
+              80,
+              18,
+            ],
+            "id": 272,
+            "original_language": "en",
+            "original_title": "Batman Begins",
+            "overview": "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman.",
+            "popularity": 35.273,
+            "poster_path": "/dr6x4GyyegBWtinPBzipY02J2lV.jpg",
+            "release_date": "2005-06-10",
+            "title": "Batman Begins",
+            "video": false,
+            "vote_average": 7.6,
+            "vote_count": 13502,
+          },
+          Object {
+            "adult": false,
+            "backdrop_path": "/2blmxp2pr4BhwQr74AdCfwgfMOb.jpg",
+            "genre_ids": Array [
+              28,
+              14,
+            ],
+            "id": 268,
+            "original_language": "en",
+            "original_title": "Batman",
+            "overview": "The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker, who has seized control of Gotham's underworld.",
+            "popularity": 20.915,
+            "poster_path": "/kBf3g9crrADGMc2AMAMlLBgSm2h.jpg",
+            "release_date": "1989-06-23",
+            "title": "Batman",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 4374,
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onContentSizeChange={[Function]}
+      onEndReached={[Function]}
+      onEndReachedThreshold={0.4}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      style={
+        Object {
+          "paddingVertical": 10,
+        }
+      }
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#EEE",
+                "flexDirection": "row",
+                "marginTop": 10,
+                "padding": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://image.tmdb.org/t/p/original/dr6x4GyyegBWtinPBzipY02J2lV.jpg",
+                  }
+                }
+                style={
+                  Object {
+                    "flex": 1,
+                    "height": 50,
+                    "width": 50,
+                  }
+                }
+              />
+            </View>
+            <Text
+              style={
+                Object {
+                  "flex": 1,
+                  "flexGrow": 2,
+                  "fontSize": 18,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Batman Begins
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <View
+                accessibilityRole="button"
+                accessibilityStates={Array []}
+                accessible={true}
+                focusable={true}
+                hitSlop={
+                  Object {
+                    "bottom": 6,
+                    "left": 6,
+                    "right": 6,
+                    "top": 6,
+                  }
+                }
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "margin": 6,
+                        "overflow": "hidden",
+                      },
+                      Object {
+                        "borderRadius": 22.5,
+                        "height": 45,
+                        "width": 45,
+                      },
+                      undefined,
+                      Object {
+                        "flex": 1,
+                      },
+                    ],
+                  ]
+                }
+              >
+                <View
+                  style={null}
+                >
+                  <Text
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                    pointerEvents="none"
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                        Object {
+                          "color": "#000",
+                          "fontSize": 30,
+                        },
+                      ]
+                    }
+                  >
+                    □
+                  </Text>
+                </View>
+              </View>
+              <View
+                accessibilityRole="button"
+                accessibilityStates={Array []}
+                accessible={true}
+                focusable={true}
+                hitSlop={
+                  Object {
+                    "bottom": 6,
+                    "left": 6,
+                    "right": 6,
+                    "top": 6,
+                  }
+                }
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "margin": 6,
+                        "overflow": "hidden",
+                      },
+                      Object {
+                        "borderRadius": 22.5,
+                        "height": 45,
+                        "width": 45,
+                      },
+                      undefined,
+                      Object {
+                        "flex": 1,
+                      },
+                    ],
+                  ]
+                }
+              >
+                <View
+                  style={null}
+                >
+                  <Text
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                    pointerEvents="none"
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                        Object {
+                          "color": "#000",
+                          "fontSize": 30,
+                        },
+                      ]
+                    }
+                  >
+                    □
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#EEE",
+                "flexDirection": "row",
+                "marginTop": 10,
+                "padding": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://image.tmdb.org/t/p/original/kBf3g9crrADGMc2AMAMlLBgSm2h.jpg",
+                  }
+                }
+                style={
+                  Object {
+                    "flex": 1,
+                    "height": 50,
+                    "width": 50,
+                  }
+                }
+              />
+            </View>
+            <Text
+              style={
+                Object {
+                  "flex": 1,
+                  "flexGrow": 2,
+                  "fontSize": 18,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Batman
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <View
+                accessibilityRole="button"
+                accessibilityStates={Array []}
+                accessible={true}
+                focusable={true}
+                hitSlop={
+                  Object {
+                    "bottom": 6,
+                    "left": 6,
+                    "right": 6,
+                    "top": 6,
+                  }
+                }
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "margin": 6,
+                        "overflow": "hidden",
+                      },
+                      Object {
+                        "borderRadius": 22.5,
+                        "height": 45,
+                        "width": 45,
+                      },
+                      undefined,
+                      Object {
+                        "flex": 1,
+                      },
+                    ],
+                  ]
+                }
+              >
+                <View
+                  style={null}
+                >
+                  <Text
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                    pointerEvents="none"
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                        Object {
+                          "color": "#000",
+                          "fontSize": 30,
+                        },
+                      ]
+                    }
+                  >
+                    □
+                  </Text>
+                </View>
+              </View>
+              <View
+                accessibilityRole="button"
+                accessibilityStates={Array []}
+                accessible={true}
+                focusable={true}
+                hitSlop={
+                  Object {
+                    "bottom": 6,
+                    "left": 6,
+                    "right": 6,
+                    "top": 6,
+                  }
+                }
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "margin": 6,
+                        "overflow": "hidden",
+                      },
+                      Object {
+                        "borderRadius": 22.5,
+                        "height": 45,
+                        "width": 45,
+                      },
+                      undefined,
+                      Object {
+                        "flex": 1,
+                      },
+                    ],
+                  ]
+                }
+              >
+                <View
+                  style={null}
+                >
+                  <Text
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                    pointerEvents="none"
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                        Object {
+                          "color": "#000",
+                          "fontSize": 30,
+                        },
+                      ]
+                    }
+                  >
+                    □
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
+exports[`FilmsSearch Page it should render flatlist with 2 films from local storage 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "column",
+      "paddingHorizontal": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 20,
+        "flexDirection": "row",
+        "flexGrow": 1,
+        "marginBottom": 10,
+        "marginTop": 20,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      dense={true}
+      mode="Outlined"
+      onChangeText={[Function]}
+      placeholder="Busque seu filme"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "flex": 1,
+          "flexGrow": 4,
+          "paddingHorizontal": 10,
+          "paddingVertical": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+      value=""
+    />
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      focusable={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "margin": 6,
+              "overflow": "hidden",
+            },
+            Object {
+              "borderRadius": 18,
+              "height": 36,
+              "width": 36,
+            },
+            undefined,
+            Object {
+              "flex": 1,
+            },
+          ],
+        ]
+      }
+    >
+      <View
+        style={null}
+      >
+        <Text
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+          pointerEvents="none"
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "color": "#000000",
+                "fontSize": 24,
+              },
+            ]
+          }
+        >
+          □
+        </Text>
+      </View>
+    </View>
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      focusable={false}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "margin": 6,
+              "overflow": "hidden",
+            },
+            Object {
+              "borderRadius": 18,
+              "height": 36,
+              "width": 36,
+            },
+            undefined,
+            Object {
+              "flex": 1,
+            },
+          ],
+        ]
+      }
+    >
+      <View
+        style={null}
+      >
+        <Text
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+          pointerEvents="none"
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "color": "#000000",
+                "fontSize": 24,
+              },
+            ]
+          }
+        >
+          □
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <Text
+      style={
+        Object {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      Filmes salvos
+    </Text>
+    <RCTScrollView
+      ListFooterComponent={[Function]}
+      data={
+        Array [
+          Object {
+            "adult": false,
+            "backdrop_path": "/9myrRcegWGGp24mpVfkD4zhUfhi.jpg",
+            "genre_ids": Array [
+              28,
+              80,
+              18,
+            ],
+            "id": 272,
+            "original_language": "en",
+            "original_title": "Batman Begins",
+            "overview": "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman.",
+            "popularity": 35.273,
+            "poster_path": "/dr6x4GyyegBWtinPBzipY02J2lV.jpg",
+            "release_date": "2005-06-10",
+            "title": "Batman Begins",
+            "video": false,
+            "vote_average": 7.6,
+            "vote_count": 13502,
+          },
+          Object {
+            "adult": false,
+            "backdrop_path": "/2blmxp2pr4BhwQr74AdCfwgfMOb.jpg",
+            "genre_ids": Array [
+              28,
+              14,
+            ],
+            "id": 268,
+            "original_language": "en",
+            "original_title": "Batman",
+            "overview": "The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker, who has seized control of Gotham's underworld.",
+            "popularity": 20.915,
+            "poster_path": "/kBf3g9crrADGMc2AMAMlLBgSm2h.jpg",
+            "release_date": "1989-06-23",
+            "title": "Batman",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 4374,
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onContentSizeChange={[Function]}
+      onEndReached={[Function]}
+      onEndReachedThreshold={0.4}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      style={
+        Object {
+          "paddingVertical": 10,
+        }
+      }
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#EEE",
+                "flexDirection": "row",
+                "marginTop": 10,
+                "padding": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://image.tmdb.org/t/p/original/dr6x4GyyegBWtinPBzipY02J2lV.jpg",
+                  }
+                }
+                style={
+                  Object {
+                    "flex": 1,
+                    "height": 50,
+                    "width": 50,
+                  }
+                }
+              />
+            </View>
+            <Text
+              style={
+                Object {
+                  "flex": 1,
+                  "flexGrow": 2,
+                  "fontSize": 18,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Batman Begins
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <View
+                accessibilityRole="button"
+                accessibilityStates={Array []}
+                accessible={true}
+                focusable={true}
+                hitSlop={
+                  Object {
+                    "bottom": 6,
+                    "left": 6,
+                    "right": 6,
+                    "top": 6,
+                  }
+                }
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "margin": 6,
+                        "overflow": "hidden",
+                      },
+                      Object {
+                        "borderRadius": 22.5,
+                        "height": 45,
+                        "width": 45,
+                      },
+                      undefined,
+                      Object {
+                        "flex": 1,
+                      },
+                    ],
+                  ]
+                }
+              >
+                <View
+                  style={null}
+                >
+                  <Text
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                    pointerEvents="none"
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                        Object {
+                          "color": "#000",
+                          "fontSize": 30,
+                        },
+                      ]
+                    }
+                  >
+                    □
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#EEE",
+                "flexDirection": "row",
+                "marginTop": 10,
+                "padding": 20,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "uri": "https://image.tmdb.org/t/p/original/kBf3g9crrADGMc2AMAMlLBgSm2h.jpg",
+                  }
+                }
+                style={
+                  Object {
+                    "flex": 1,
+                    "height": 50,
+                    "width": 50,
+                  }
+                }
+              />
+            </View>
+            <Text
+              style={
+                Object {
+                  "flex": 1,
+                  "flexGrow": 2,
+                  "fontSize": 18,
+                  "fontWeight": "bold",
+                }
+              }
+            >
+              Batman
+            </Text>
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <View
+                accessibilityRole="button"
+                accessibilityStates={Array []}
+                accessible={true}
+                focusable={true}
+                hitSlop={
+                  Object {
+                    "bottom": 6,
+                    "left": 6,
+                    "right": 6,
+                    "top": 6,
+                  }
+                }
+                isTVSelectable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "margin": 6,
+                        "overflow": "hidden",
+                      },
+                      Object {
+                        "borderRadius": 22.5,
+                        "height": 45,
+                        "width": 45,
+                      },
+                      undefined,
+                      Object {
+                        "flex": 1,
+                      },
+                    ],
+                  ]
+                }
+              >
+                <View
+                  style={null}
+                >
+                  <Text
+                    accessibilityElementsHidden={true}
+                    importantForAccessibility="no-hide-descendants"
+                    pointerEvents="none"
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                        },
+                        Object {
+                          "color": "#000",
+                          "fontSize": 30,
+                        },
+                      ]
+                    }
+                  >
+                    □
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
+exports[`FilmsSearch Page it should render flatlist with no local movies 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "column",
+      "paddingHorizontal": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 20,
+        "flexDirection": "row",
+        "flexGrow": 1,
+        "marginBottom": 10,
+        "marginTop": 20,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      dense={true}
+      mode="Outlined"
+      onChangeText={[Function]}
+      placeholder="Busque seu filme"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "flex": 1,
+          "flexGrow": 4,
+          "paddingHorizontal": 10,
+          "paddingVertical": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+      value=""
+    />
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      focusable={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "margin": 6,
+              "overflow": "hidden",
+            },
+            Object {
+              "borderRadius": 18,
+              "height": 36,
+              "width": 36,
+            },
+            undefined,
+            Object {
+              "flex": 1,
+            },
+          ],
+        ]
+      }
+    >
+      <View
+        style={null}
+      >
+        <Text
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+          pointerEvents="none"
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "color": "#000000",
+                "fontSize": 24,
+              },
+            ]
+          }
+        >
+          □
+        </Text>
+      </View>
+    </View>
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      focusable={false}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "margin": 6,
+              "overflow": "hidden",
+            },
+            Object {
+              "borderRadius": 18,
+              "height": 36,
+              "width": 36,
+            },
+            undefined,
+            Object {
+              "flex": 1,
+            },
+          ],
+        ]
+      }
+    >
+      <View
+        style={null}
+      >
+        <Text
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+          pointerEvents="none"
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "color": "#000000",
+                "fontSize": 24,
+              },
+            ]
+          }
+        >
+          □
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View>
+    <Text
+      style={
+        Object {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "marginTop": 10,
+          "textAlign": "center",
+        }
+      }
+    >
+      Nenhum filme salvo
+    </Text>
+    <RCTScrollView
+      ListFooterComponent={[Function]}
+      data={Array []}
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onContentSizeChange={[Function]}
+      onEndReached={[Function]}
+      onEndReachedThreshold={0.4}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      style={
+        Object {
+          "paddingVertical": 10,
+        }
+      }
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+        />
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
+
+exports[`FilmsSearch Page it should render loading screen 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "column",
+      "paddingHorizontal": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "borderRadius": 20,
+        "flexDirection": "row",
+        "flexGrow": 1,
+        "marginBottom": 10,
+        "marginTop": 20,
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      dense={true}
+      mode="Outlined"
+      onChangeText={[Function]}
+      placeholder="Busque seu filme"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "flex": 1,
+          "flexGrow": 4,
+          "paddingHorizontal": 10,
+          "paddingVertical": 10,
+        }
+      }
+      underlineColorAndroid="transparent"
+      value=""
+    />
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      focusable={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "margin": 6,
+              "overflow": "hidden",
+            },
+            Object {
+              "borderRadius": 18,
+              "height": 36,
+              "width": 36,
+            },
+            undefined,
+            Object {
+              "flex": 1,
+            },
+          ],
+        ]
+      }
+    >
+      <View
+        style={null}
+      >
+        <Text
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+          pointerEvents="none"
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "color": "#000000",
+                "fontSize": 24,
+              },
+            ]
+          }
+        >
+          □
+        </Text>
+      </View>
+    </View>
+    <View
+      accessibilityRole="button"
+      accessibilityStates={Array []}
+      accessible={true}
+      focusable={false}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "margin": 6,
+              "overflow": "hidden",
+            },
+            Object {
+              "borderRadius": 18,
+              "height": 36,
+              "width": 36,
+            },
+            undefined,
+            Object {
+              "flex": 1,
+            },
+          ],
+        ]
+      }
+    >
+      <View
+        style={null}
+      >
+        <Text
+          accessibilityElementsHidden={true}
+          importantForAccessibility="no-hide-descendants"
+          pointerEvents="none"
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+              },
+              Object {
+                "color": "#000000",
+                "fontSize": 24,
+              },
+            ]
+          }
+        >
+          □
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 10,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#EEE",
+            "flexDirection": "row",
+            "marginTop": 20,
+            "padding": 40,
+          },
+          Object {
+            "flexDirection": "row",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#EEE",
+            "flexDirection": "row",
+            "marginTop": 20,
+            "padding": 40,
+          },
+          Object {
+            "flexDirection": "row",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#EEE",
+            "flexDirection": "row",
+            "marginTop": 20,
+            "padding": 40,
+          },
+          Object {
+            "flexDirection": "row",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#EEE",
+            "flexDirection": "row",
+            "marginTop": 20,
+            "padding": 40,
+          },
+          Object {
+            "flexDirection": "row",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#EEE",
+            "flexDirection": "row",
+            "marginTop": 20,
+            "padding": 40,
+          },
+          Object {
+            "flexDirection": "row",
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

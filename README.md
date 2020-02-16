@@ -2,6 +2,13 @@
 
 O app que tem todos os seus filmes preferidos
 
+- Busque seus filmes
+  - Veja os detalhes
+  - Salve os seus filmes preferidos
+- Veja os cinemas mais próximos de você
+  - Busque cinemas em outras localidades navegando no mapa
+  - Veja os detalhes do cinema ao clicar no mapa
+
 ## Print do app
 
 ![Print 1](https://i.ibb.co/d4GN3y0/Whats-App-Image-2020-02-13-at-02-19-15.jpg) ![Print 2](https://i.ibb.co/zswcZrv/Whats-App-Image-2020-02-13-at-02-18-23.jpg)
@@ -12,6 +19,12 @@ O app que tem todos os seus filmes preferidos
 
 ```
 yarn
+```
+
+### Rodar testes
+
+```
+yarn test
 ```
 
 ### Então rodar o camando para iniciar o aplicativo no emulador ou Smartphone
